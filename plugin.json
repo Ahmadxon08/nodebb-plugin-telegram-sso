@@ -2,7 +2,7 @@
     "id": "nodebb-plugin-telegram-sso",
     "name": "NodeBB Telegram SSO",
     "description": "Telegram SSO plugin for NodeBB",
-    "url": "https://github.com/USERNAME/nodebb-plugin-telegram-sso",
+    "url": "https://github.com/Ahmadxon08/nodebb-plugin-telegram-sso",
     "library": "./lib/library.js",
     "hooks": [
         { "hook": "filter:auth.init", "method": "getStrategy" },

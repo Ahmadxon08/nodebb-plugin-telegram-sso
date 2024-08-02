@@ -1,12 +1,9 @@
 
-<div class="panel panel-default">
-    <div class="panel-heading">Telegram SSO Plugin</div>
-    <div class="panel-body">
-        <p>Configure your Telegram SSO settings here.</p>
-        <div class="form-group">
-            <label for="telegram-bot-token">Bot Token</label>
-            <input type="text" class="form-control" id="telegram-bot-token" placeholder="Enter your Telegram Bot Token">
-        </div>
-        <button type="button" class="btn btn-primary" id="save-settings">Save</button>
+<h1>Telegram SSO Plugin Settings</h1>
+<form action="/admin/plugins/telegram-sso/save" method="post">
+    <div class="form-group">
+        <label for="botToken">Telegram Bot Token</label>
+        <input type="text" class="form-control" name="botToken" id="botToken" value="<%= botToken %>">
     </div>
-</div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

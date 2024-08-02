@@ -1,20 +1,20 @@
 $(document).ready(function() {
-    // Formani yuborishni boshqarish
+
     $('#settings-form').on('submit', function(e) {
-        e.preventDefault(); // Formani standart yuborilishini to'xtatish
+        e.preventDefault(); 
 
         var botToken = $('#botToken').val().trim();
         if (botToken === '') {
-            // Token bo'sh bo'lsa, xabar berish
-            $('#botToken').addClass('is-invalid'); // Formani xatolik holatida belgilash
+           
+            $('#botToken').addClass('is-invalid'); 
             $('#error-message').text('Telegram bot tokeni kerak!');
             return;
         } else {
-            $('#botToken').removeClass('is-invalid'); // Formani to'g'ri holatida belgilash
+            $('#botToken').removeClass('is-invalid'); 
             $('#error-message').text('');
         }
 
-        var formData = $(this).serialize(); // Form ma'lumotlarini olish
+        var formData = $(this).serialize(); 
 
         // AJAX so'rovini yuborish
         $.ajax({
@@ -22,7 +22,7 @@ $(document).ready(function() {
             method: 'POST',
             data: formData,
             beforeSend: function() {
-                $('#save-button').prop('disabled', true); // Tugmani faollashtirishdan oldin o'chirish
+                $('#save-button').prop('disabled', true); 
                 $('#save-button').text('Saqlanmoqda...'); // Tugma matnini o'zgartirish
             },
             success: function(response) {
